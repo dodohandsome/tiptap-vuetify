@@ -101,7 +101,6 @@ import { mixins } from 'vue-class-component'
 import { Component, Prop } from 'vue-property-decorator'
 import { VRow, VCol, VImg, VDialog, VCard, VCardTitle, VCardText, VCardActions, VBtn, VSpacer, VIcon, VTextField, VTabs, VTab, VTabsSlider, VTabItem, VTabsItems } from 'vuetify/lib'
 import I18nMixin from '~/mixins/I18nMixin'
-import ImageUploadArea from '~/extensions/nativeExtensions/image/ImageUploadArea.vue'
 import ImageForm from '~/extensions/nativeExtensions/image/ImageForm.vue'
 import ImageSource from '~/extensions/nativeExtensions/image/ImageSource'
 import { VExpandTransition } from 'vuetify/lib/components/transitions'
@@ -117,7 +116,7 @@ export const PROPS = {
 }
 
 @Component({
-  components: { VRow, VCol, VExpandTransition, ImageForm, ImageUploadArea, VImg, VDialog, VCard, VCardTitle, VCardText, VCardActions, VBtn, VSpacer, VIcon, VTextField, VTabs, VTab, VTabsSlider, VTabItem, VTabsItems }
+  components: { VRow, VCol, VExpandTransition, ImageForm, VImg, VDialog, VCard, VCardTitle, VCardText, VCardActions, VBtn, VSpacer, VIcon, VTextField, VTabs, VTab, VTabsSlider, VTabItem, VTabsItems }
 })
 export default class ImageWindow extends mixins(I18nMixin) {
   @Prop({
@@ -162,10 +161,6 @@ export default class ImageWindow extends mixins(I18nMixin) {
     {
       name: 'URL',
       component: ImageForm
-    },
-    {
-      name: 'Upload',
-      component: ImageUploadArea
     }
   ]
 
